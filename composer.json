@@ -1,0 +1,55 @@
+{
+    "name": "wdevs/laravel-zenserp",
+    "description": "Easily work with the Zenserp API in a Laravel application.",
+    "keywords": [
+        "wijnberg.dev",
+        "laravel-zenserp"
+    ],
+    "homepage": "https://github.com/Paulsky/laravel-zenserp",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Wijnberg Developments",
+            "email": "contact@wijnberg.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "guzzlehttp/guzzle": "^6.0",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WDevs\\LaravelZenserp\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WDevs\\LaravelZenserp\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WDevs\\LaravelZenserp\\Providers\\LaravelZenserpServiceProvider"
+            ],
+            "aliases": {
+                "LaravelZenserp": "WDevs\\LaravelZenserp\\Providers\\LaravelZenserpFacade"
+            }
+        }
+    }
+}
