@@ -56,7 +56,7 @@ class BaseEndpoint
         $response = $this->client->get($url, $params);
 
         // Throw an exception if a client or server error occurred...
-        $response->throw();
+        $response->throw(null); //not sure why null is used here....
 
         return $response->json();
     }
