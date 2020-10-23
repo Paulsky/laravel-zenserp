@@ -21,12 +21,13 @@ class LaravelZenserp
      */
     private $searchEndpoint;
 
+
     public function __construct()
     {
         $this->client = Http::withOptions([
             // Base URI is used with relative requests
             'base_uri' => self::$API_ROUTE
-        ]);
+        ])->retry(3, 1000);
 
 
     }
