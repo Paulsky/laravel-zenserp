@@ -1,3 +1,6 @@
+# DEPRECATED | NOT MAINTAINED ANYMORE 
+## Zenserp does not provide any support or answers any questions regarding their API
+
 # Zenserp Laravel API Client
 
 Laravel package for the [Zenserp](https://zenserp.com/documentation) API.
